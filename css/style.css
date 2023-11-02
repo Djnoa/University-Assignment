@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global body styling */
+#hp-body {
+    background-image: url('../images/cardiff-city1.jpg'); 
+    background-size: cover; 
+    background-position: center 20%; 
+    background-repeat: no-repeat; 
+}
+
+/* Header styling */
+#hp-header {
+    width: 80vw; 
+    height: 175px;
+    margin: auto;
+    background: linear-gradient(to bottom, white 50%, #00B140 50%);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 0.2s; 
+}
+
+/* Main title styling */
+#main-title {
+    margin: 100px 0 5px 0;
+    text-align: center;
+    color: #C8102E;
+    font-size: 4.3rem;
+    font-family: 'Audiowide', cursive;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 0.6s;
+}
+
+/* Tagline styling */
+#tagline {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Source Code Pro', monospace;
+    word-spacing: 0.1em;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 0.6s;
+}
+
+/* Tagline anchor link styling */
+#tagline a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+}
+
+/* Tagline anchor link hover styling */
+#tagline a:hover {
+    color: blue;
+    text-decoration: underline;
+    font-size: 1.6rem;
+}
+
+/* Horizontal rule styling in the header */
+#header-hr {
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid #191919;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 0.6s;
+}
+
+/* Styling for the pipes in the tagline */
+.tagline-pipe {
+    margin: 0 10px;
+    color: #C8102E;
+    font-size: 2.1rem;
+}
+
+/* Fade-in animation definition */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main content section styling */
+#hp-main {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Content block styling */
+#content-block {
+    flex: 50%;
+    margin: 150px 50px;
+    padding: 30px;
+    background-color: #f5f5f5;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    counter-reset: line-number 33;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 0.2s;
+}
+
+/* Content heading styling */
+.content-heading {
+    margin: 0 0 10px 0;
+    color: #C8102E;
+    font-size: 2.5rem;
+    font-family: 'Source Code Pro', monospace;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 0.6s;
+}
+
+/* Content horizontal rule styling */
+#content-hr {
+    width: 55%;
+    border: 1px solid #191919;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 0.6s;
+}
+
+/* Content paragraph styling */
+.content-para {
+    position: relative;
+    margin: 0;
+    padding-left: 50px;
+    color: #000;
+    font-size: 1.22rem;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 2.2;
+    opacity: 0;
+    animation: fadeIn 2.3s ease-out forwards 1s;
+}
+
+.content-para::before {
+    position: absolute;
+    left: 0;
+    counter-increment: line-number;
+    content: counter(line-number);
+    width: 30px;
+    color: #888;
+    text-align: right;
+}
+
+.content-para::after {
+    position: absolute;
+    left: 35px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #888;
+}
+
+/* Syntax highlighting styles */
+.keyword {
+    color: #569CD6;
+}
+
+.variable {
+    color: #9CDCFE;
+}
+
+.boolean {
+    color: #569CD6;
+}
+
+.string {
+    color: #D69D85;
+}
+
+/* Image styling within the content */
+#content-image {
+    height: 360px;
+    margin: 90px 50px 0 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards 0.6s;
+}
+
+
+
+/* Styling for other pages */
+
+.article-header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    background: linear-gradient(to bottom, white 50%, #00B140 50%);
+}
+
+
+.hp-link {
+    
+    text-decoration: none;
+    font-family: 'Audiowide', cursive; /* Defines the font stack for the header */
+    font-size: 4.3rem; /* Defines the heading text font size */
+    color: #C8102E;  /* Defines the heading text color */
+    
+}
+
+.hp-link:hover {
+
+    font-size:4.6rem ;
+    transition: font-size 0.5s;
+}
+
+#nav-list {
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 43px;
+     margin: 0;
+     text-align: center;
+     background-color: #191919;
+
+}
+
+
+.nav-list-item {
+    
+    display: inline-block;
+    margin: 0 10px;
+    list-style: none;
+
+}
+
+.nav-link {
+    
+    text-decoration: none;
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: 1.4rem;
+    color: white;
+    transition: color 0.5s;
+
+}
+
+.nav-list-item:not(:last-child)::after {
+    content: "|";
+    color: #D5B60A;
+    margin-left: 10px;
+    font-size: 1.9rem;
+    font-weight: 800;
+}
+
+.nav-link:hover {
+
+    color: #D5B60A;
+    
+}
+
+.article-main {
+
+    margin: 30px 80px 0 80px;
+    position: relative;
+}
+
+.article-heading-container {
+
+    position: relative;
+}
+
+
+.article-heading {
+
+    text-align: center;
+    word-spacing: 0.1em;
+    font-family: 'Khand', sans-serif;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: #C8102E;
+
+}
+
+
+.article-hr {
+
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 52.5%; 
+    border: 2px solid #191919; 
+
+}
+
+
+#bio-container1 {
+
+    display: flex;
+}
+
+.bio-div {
+
+    padding: 20px;
+
+}
+
+#bio-image {
+    
+    margin: 30px 0 0 0;
+    width: 600px;
+}
+
+.article-para {
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    line-height: 23px;
+    flex: 1
+
+}
+
+#bio-container2 {
+
+ display: flex; 
+ justify-content: flex-end;
+ 
+}
+
+.bio-div2 {
+
+    position: absolute;
+    top: 550px;
+    left: 20px;
+    width: 45%;
+    padding:20px 50px 100px 0;
+}
+
+
+
+#swansea-logo-container {
+
+    position: relative;
+    width: 40%;
+    margin: 70px 80px 0 0 ;
+    padding: 20px;
+
+}
+
+#swansea-logo {
+
+    width: 100%;
+    display: block;
+    margin: auto;
+    flex: 1
+}
+
+#swansea-logo-container::before,
+#swansea-logo-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px; /* Width of the diagonal line */
+  height: 623.3px; /* Span the entire height of the img */
+  background-color: #C8102E; /* Color of the diagonal line */
+  transform-origin: center;
+  transform: translateY(-50%) rotate(60.8deg);
+}
+
+
+
+ #swansea-logo-container::after {
+
+    transform: translateY(-50%) rotate(-60.8deg);
+}
